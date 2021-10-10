@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import useBreedList from './useBreedList';
 import Pet from './Pet';
 
-const ANIMALS = ['cat', 'dog', 'snake', 'lizard', 'frog', 'bird'];
+const ANIMALS = ['cat', 'dog', 'snake', 'lizard', 'frog', 'bird', 'rabbit', 'reptile'];
 
 const SearchParams = () => {
   const [location, setLocation] = useState("");
