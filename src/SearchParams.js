@@ -36,11 +36,16 @@ const SearchParams = () => {
       >
         <label htmlFor="location">
           Location
-          <input id="location" onChange={e => setLocation(e.target.value)} value={location} placeholder="location" />
+          <input
+            id="location"
+            onChange={e => setLocation(e.target.value)} value={location}
+            placeholder="location"
+          />
         </label>
         <label htmlFor="animal">
           Animal
           <select
+            onCut={console.log}
             id="animal"
             value={animal}
             onChange={e => setAnimal(e.target.value)}
@@ -74,14 +79,7 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {pets.map((pet) => (
-        <Pet
-          name={pet.name}
-          animal={pet.animal}
-          breed={pet.breed}
-          key={pet.id}
-        />
-      ))}
+      <Results pets={pets} />
     </div>
   );
 };
